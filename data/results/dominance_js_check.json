@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "fixture_queries": 500,
+  "answer_checks": 1000,
+  "checks": [
+    "raw and pruned answers",
+    "raw and pruned probe counts",
+    "budget reversal counterexample"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "file": "\u65b9\u6cd5\u5bf9\u6bd4.mp4",
+  "width": 1920,
+  "height": 1080,
+  "fps": "60/1",
+  "duration_seconds": 44.966667,
+  "bytes": 2412387,
+  "examples": [
+    "wiki-positive",
+    "wiki-negative",
+    "p2p-unchanged"
+  ],
+  "unique_frames": 2698,
+  "chapters": [
+    {
+      "example": "wiki-positive",
+      "start_seconds": 0.0,
+      "duration_seconds": 11.3
+    },
+    {
+      "example": "wiki-negative",
+      "start_seconds": 11.3,
+      "duration_seconds": 20.416666666666668
+    },
+    {
+      "example": "p2p-unchanged",
+      "start_seconds": 31.716666666666665,
+      "duration_seconds": 13.25
+    }
+  ],
+  "playback": "Deterministic continuous SVG animation; one core lookup per shared step.",
+  "preview": "\u67e5\u8be2\u5bf9\u6bd4.gif"
+}

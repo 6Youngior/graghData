@@ -1,0 +1,11 @@
+{
+  "name": "wiki-Vote",
+  "nodes": 7115,
+  "edges": 103689,
+  "raw_edges": 103689,
+  "removed_self_loops": 0,
+  "removed_parallel_edges": 0,
+  "directed": true,
+  "weighted": false,
+  "edge_sha256": "ba1bb3d6376c92aab151f83a573090effa5671d3e38c169059f2903a62d73104"
+}

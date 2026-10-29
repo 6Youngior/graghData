@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "main_query_instances": 270000,
+  "main_method_answers": 810000,
+  "independent_scipy_distance_checks": 648,
+  "all_logical_probe_sequences_equivalent": true,
+  "adaptive_space_never_exceeds_smaller_global_codec": true,
+  "reports": [
+    {
+      "dataset": "wiki-Vote",
+      "encoded_entries_or_dense_cells_checked": 62077321
+    },
+    {
+      "dataset": "p2p-Gnutella31",
+      "encoded_entries_or_dense_cells_checked": 2311169401
+    },
+    {
+      "dataset": "email-EuAll",
+      "encoded_entries_or_dense_cells_checked": 4192907463
+    }
+  ]
+}

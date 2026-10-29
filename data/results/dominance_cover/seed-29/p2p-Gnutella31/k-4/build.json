@@ -1,0 +1,56 @@
+{
+  "dataset": "p2p-Gnutella31",
+  "k": 4,
+  "cover": 25768,
+  "boundary_build_seconds": 2.317083299996739,
+  "shared_bfs_seconds": 0.46104590000322787,
+  "bfs_kmax": 4,
+  "scratch_distance_bytes": 663989824,
+  "max_certificate_scratch_bytes": 166152064,
+  "boundaries": {
+    "k_minus_2": {
+      "budget": 2,
+      "out_subset_checks": 60,
+      "in_subset_checks": 333,
+      "out_word_checks": 3944,
+      "in_word_checks": 57052,
+      "out_removed": 8,
+      "in_removed": 18,
+      "out_changed_vertices": 8,
+      "in_changed_vertices": 17,
+      "raw_out_entries": 1549,
+      "raw_in_entries": 58905,
+      "pruned_out_entries": 1541,
+      "pruned_in_entries": 58887,
+      "certificate_scratch_bytes": 166152064,
+      "deployed_boundary_bytes": 742408
+    },
+    "k_minus_1": {
+      "budget": 3,
+      "out_subset_checks": 184,
+      "in_subset_checks": 588,
+      "out_word_checks": 9162,
+      "in_word_checks": 71651,
+      "out_removed": 20,
+      "in_removed": 24,
+      "out_changed_vertices": 19,
+      "in_changed_vertices": 23,
+      "raw_out_entries": 1549,
+      "raw_in_entries": 58905,
+      "pruned_out_entries": 1529,
+      "pruned_in_entries": 58881,
+      "certificate_scratch_bytes": 166152064,
+      "deployed_boundary_bytes": 742336
+    }
+  },
+  "boundary_bytes": {
+    "raw": 742512,
+    "source": 1484912,
+    "target": 1484856,
+    "both": 1484744
+  },
+  "core_index_bytes": {
+    "csr": 22793656,
+    "adaptive": 22793656
+  }
+}

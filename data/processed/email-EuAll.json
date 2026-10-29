@@ -1,0 +1,11 @@
+{
+  "name": "email-EuAll",
+  "nodes": 265214,
+  "edges": 418956,
+  "raw_edges": 420045,
+  "removed_self_loops": 1089,
+  "removed_parallel_edges": 0,
+  "directed": true,
+  "weighted": false,
+  "edge_sha256": "cf353929cc5d8ab55979292fbde642076bdeb5cda3327bccdda5e486940f49b3"
+}

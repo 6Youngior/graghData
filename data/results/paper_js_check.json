@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "fixture_queries": 500,
+  "codec_queries": 1500,
+  "checks": [
+    "answers",
+    "four cases",
+    "core probes",
+    "binary comparisons"
+  ]
+}

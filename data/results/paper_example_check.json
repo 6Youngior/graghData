@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "paper_figure_distances_checked": 6,
+  "demo_query_fixtures": 500,
+  "codec_answer_checks": 1500
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "kind": "controlled synthetic mechanism test; not production traces",
+  "cover": "explicit 2d core vertices; every edge covered; interleaved IDs",
+  "graph": "two nested directed core clusters; 32 outside sources and 32 outside targets",
+  "positive": "one extra edge connects largest source core to maximal incoming target core",
+  "parameters": [
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "queries_per_graph": 1024,
+  "point_probe_identity": "negative d^2; positive d(d-1)+1; pruned 1",
+  "answer_checks": 40960
+}

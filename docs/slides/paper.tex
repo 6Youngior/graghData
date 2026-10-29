@@ -1,0 +1,126 @@
+\section{背景与问题}
+\begin{frame}{研究背景与问题定义}
+社交关系分析、信任关系检索等任务，常需要限制关系链的长度。对大量重复查询，逐次运行 BFS 会反复访问相同的局部结构。
+\par\vspace{2mm}
+\begin{columns}[c,onlytextwidth]
+\column{.45\textwidth}
+\begin{block}{K-hop 可达性查询}
+给定有向无权图 $G=(V,E)$、节点 $s,t$ 和跳数上限 $k$，判断是否存在至多 $k$ 条边的路径：
+\[
+Q(s,t,k)=[d_G(s,t)\le k].
+\]
+\end{block}
+\column{.51\textwidth}\centering
+\resizebox{\linewidth}{!}{\PaperGraph[0]{a/b,b/d,d/e,e/g}}\par\vspace{2mm}
+$d(a,g)=4$\par
+$k=3$：不可达 \qquad $k=4$：可达
+\end{columns}
+\end{frame}
+
+\section{论文方法}
+\begin{frame}{K-Reach 的研究思路与框架}
+\noindent
+{\fontsize{10.5}{13}\selectfont
+\textbf{K-Reach: Who is in Your Small World}\par
+James Cheng, Zechao Shang, Hong Cheng, Haixun Wang, Jeffrey Xu Yu\par
+\emph{PVLDB} 5(11):1292–1303, 2012.}\par\vspace{3mm}
+论文通过顶点覆盖，将任意端点的跳数查询转化为核心节点之间的距离判定。
+\par\vspace{2mm}
+\begin{columns}[c,onlytextwidth]
+\column{.30\textwidth}
+\begin{block}{顶点覆盖}
+选择核心集合，使覆盖外端点一跳接入核心。
+\end{block}
+\column{.03\textwidth}\centering$\rightarrow$
+\column{.30\textwidth}
+\begin{block}{三档距离索引}
+保存 $k-2$、$k-1$、$k$ 三个阈值需要的信息。
+\end{block}
+\column{.03\textwidth}\centering$\rightarrow$
+\column{.30\textwidth}
+\begin{block}{四类查询}
+根据起点和终点是否在核心中，选择查询方式。
+\end{block}
+\end{columns}
+\par\vspace{2mm}
+这种设计兼顾了索引规模与查询效率，避免保存所有完整距离。
+\end{frame}
+
+\begin{frame}{关键技术一：用顶点覆盖连接查询端点}
+\begin{columns}[c,onlytextwidth]
+\column{.60\textwidth}\centering
+\resizebox{\linewidth}{!}{\PaperGraph{b/d,g/i}}\par\vspace{2mm}
+覆盖集合 $S=\{b,d,g,i\}$
+\column{.36\textwidth}
+顶点覆盖要求每条边至少一端在 $S$。\par\vspace{2mm}
+因此，覆盖外节点之间没有边：
+\[
+s\notin S\Rightarrow N^+(s)\subseteq S,
+\]
+\[
+t\notin S\Rightarrow N^-(t)\subseteq S.
+\]
+\end{columns}
+\par\vspace{2mm}
+论文采用极大匹配的全部端点构造 2-近似顶点覆盖。查询两端各用至多一跳，即可连接到核心。
+\end{frame}
+
+\begin{frame}{关键技术二：三档距离索引}
+\begin{columns}[c,onlytextwidth]
+\column{.37\textwidth}\centering
+\begin{tikzpicture}[x=14mm,y=12mm,v/.style={circle,draw=Gold,fill=Gold!12,minimum size=7mm},a/.style={-{Stealth[length=2mm]},FBlue,thick}]
+\node[v](b)at(0,0){b};\node[v](d)at(2,0){d};
+\node[v](g)at(0,-1.65){g};\node[v](i)at(2,-1.65){i};
+\draw[a](b)--node[above]{1}(d);
+\draw[a](d)to[bend right=35]node[above]{2}(b);
+\draw[a](b)--node[left]{3}(g);
+\draw[a](d)--node[above,sloped]{2}(g);
+\draw[a](d)--node[right]{3}(i);
+\draw[a](g)--node[below]{1}(i);
+\end{tikzpicture}\par
+\Micro{$k=3$ 时的核心索引，省略自环。}
+\column{.59\textwidth}
+{\fontsize{11}{13}\selectfont
+\begin{tabular}{@{}lll@{}}\toprule
+核心距离 & 保存的权重 & 两位码\\\midrule
+$d\le k-2$ & $k-2$ & 01\\
+$d=k-1$ & $k-1$ & 10\\
+$d=k$ & $k$ & 11\\
+$d>k$ / 不可达 & 无索引边 & 00\\\bottomrule
+\end{tabular}}\par\vspace{2mm}
+从各核心节点在原图运行 $k$ 限制 BFS，预先构建索引。
+\end{columns}
+\par\vspace{2mm}
+\textbf{编码依据：}端点接入核心各占 0 或 1 跳，剩余预算只有 $k$、$k-1$ 和 $k-2$，因此三档信息足以完成判定。
+\end{frame}
+
+\begin{frame}{四类查询及其核心距离预算}
+\centering
+\begin{tabular}{@{}p{35mm}p{67mm}c@{}}\toprule
+端点位置 & 查询的核心点对 & 距离预算\\\midrule
+两点都在 $S$ & $(s,t)$ & $k$\\
+仅 $s\in S$ & $(s,v)$，$v\in N^-(t)$ & $k-1$\\
+仅 $t\in S$ & $(u,t)$，$u\in N^+(s)$ & $k-1$\\
+两点都不在 $S$ & $(u,v)$，$u\in N^+(s)$、$v\in N^-(t)$ & $k-2$\\\bottomrule
+\end{tabular}\par\vspace{4mm}
+对相应核心点对进行检查；只要存在一对满足预算，查询即返回 True。
+\end{frame}
+
+\begin{frame}{查询示例：判断 $c$ 能否在三跳内到达 $f$}
+\begin{columns}[c,onlytextwidth]
+\column{.59\textwidth}\centering
+\resizebox{\linewidth}{!}{\PaperGraph{c/b,b/d,d/f}}\par\vspace{2mm}
+$c\xrightarrow{1}b\xrightarrow{1}d\xrightarrow{1}f$
+\column{.37\textwidth}
+\begin{enumerate}
+\item $c,f\notin S$，属于第四类。
+\item 两端各占一跳，核心预算为 $3-2=1$。
+\item $d(b,d)=1$，满足预算，返回 True。
+\end{enumerate}
+\end{columns}
+\par\vspace{2mm}
+若终点改为 $h$，则需检查核心点对 $(b,g)$。其距离为 3，超过预算 1，因此返回 False。
+\par\vspace{2mm}
+当端点连接多个覆盖邻居时，算法仍需枚举这些邻居。我们接下来研究其中可以消去的冗余候选。
+\end{frame}
+

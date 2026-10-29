@@ -1,0 +1,49 @@
+{
+  "query_instances": 270000,
+  "codec_answers": 810000,
+  "main_k": 4,
+  "datasets": {
+    "wiki-Vote": {
+      "index_mib": {
+        "csr": 18.236038208007812,
+        "dense": 2.5407791137695312,
+        "adaptive": 1.840540885925293
+      },
+      "save_vs_csr": 0.8990712311012228,
+      "save_vs_dense": 0.275599804819458,
+      "geomean_speedup": 2.1257065121269636,
+      "dense_rows": 2274,
+      "sparse_rows": 964,
+      "cover": 3238,
+      "mode": "mixed"
+    },
+    "p2p-Gnutella31": {
+      "index_mib": {
+        "csr": 21.569576263427734,
+        "dense": 155.80589294433594,
+        "adaptive": 21.569576263427734
+      },
+      "save_vs_csr": 0.0,
+      "save_vs_dense": 0.861561229451483,
+      "geomean_speedup": 0.9965609129508335,
+      "dense_rows": 0,
+      "sparse_rows": 25536,
+      "cover": 25536,
+      "mode": "sparse"
+    },
+    "email-EuAll": {
+      "index_mib": {
+        "csr": 32.23606300354004,
+        "dense": 315.935546875,
+        "adaptive": 28.10506248474121
+      },
+      "save_vs_csr": 0.12814841931364818,
+      "save_vs_dense": 0.9110417844312372,
+      "geomean_speedup": 2.137696039018253,
+      "dense_rows": 2597,
+      "sparse_rows": 33739,
+      "cover": 36336,
+      "mode": "mixed"
+    }
+  }
+}

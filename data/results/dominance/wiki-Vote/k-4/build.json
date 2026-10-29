@@ -1,0 +1,56 @@
+{
+  "dataset": "wiki-Vote",
+  "k": 4,
+  "cover": 3238,
+  "boundary_build_seconds": 0.10434630000236211,
+  "shared_bfs_seconds": 0.18949170000269078,
+  "bfs_kmax": 6,
+  "scratch_distance_bytes": 10484644,
+  "max_certificate_scratch_bytes": 2642208,
+  "boundaries": {
+    "k_minus_2": {
+      "budget": 2,
+      "out_subset_checks": 19199,
+      "in_subset_checks": 6671,
+      "out_word_checks": 254576,
+      "in_word_checks": 47725,
+      "out_removed": 2917,
+      "in_removed": 775,
+      "out_changed_vertices": 980,
+      "in_changed_vertices": 212,
+      "raw_out_entries": 10751,
+      "raw_in_entries": 2367,
+      "pruned_out_entries": 7834,
+      "pruned_in_entries": 1592,
+      "certificate_scratch_bytes": 2642208,
+      "deployed_boundary_bytes": 94632
+    },
+    "k_minus_1": {
+      "budget": 3,
+      "out_subset_checks": 10055,
+      "in_subset_checks": 6939,
+      "out_word_checks": 324995,
+      "in_word_checks": 67867,
+      "out_removed": 5009,
+      "in_removed": 837,
+      "out_changed_vertices": 1223,
+      "in_changed_vertices": 217,
+      "raw_out_entries": 10751,
+      "raw_in_entries": 2367,
+      "pruned_out_entries": 5742,
+      "pruned_in_entries": 1530,
+      "certificate_scratch_bytes": 2642208,
+      "deployed_boundary_bytes": 86016
+    }
+  },
+  "boundary_bytes": {
+    "raw": 109400,
+    "source": 187096,
+    "target": 212352,
+    "both": 180648
+  },
+  "core_index_bytes": {
+    "csr": 19121872,
+    "adaptive": 1929947
+  }
+}

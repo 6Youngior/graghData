@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "theme": "sonnyhcl/beamerthemefdu",
+  "license": "Apache-2.0",
+  "upstream_git_blob_sha": "9f6115ae955c02b47d26df5bff00a2a9c687bbb1",
+  "upstream_sty_unmodified": true,
+  "native_templates_preserved": [
+    "title page",
+    "headline",
+    "frametitle",
+    "footline",
+    "background canvas"
+  ],
+  "group_identity_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "shared_watermark_stream_sha256": [
+    "f998625dd23e0d848c68f6b31e4620c2f0816b58961eb11c2251fe07b2a2327c"
+  ]
+}

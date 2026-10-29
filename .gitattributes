@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.pdf binary
+*.png binary
+*.mp4 binary
+*.npz binary
+*.gz binary
+*.pptx binary
+docs/slides/vendor-fdu/* -text

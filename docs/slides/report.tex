@@ -1,0 +1,70 @@
+% !TeX program = xelatex
+% Paper-first report; original sonnyhcl/beamerthemefdu in vendor-fdu/ (Apache-2.0).
+\documentclass[aspectratio=169,12pt,fontset=none]{ctexbeamer}
+\usepackage{lmodern,fontspec,amsmath,amssymb,booktabs,array,tabularx,graphicx,tikz}
+\setsansfont{Arial}\setmainfont{Arial}
+\setCJKmainfont{Microsoft YaHei}[BoldFont=Microsoft YaHei Bold]
+\setCJKsansfont{Microsoft YaHei}[BoldFont=Microsoft YaHei Bold]
+\setCJKmonofont{Microsoft YaHei}
+\usetikzlibrary{arrows.meta,positioning,calc,backgrounds,fit}
+\makeatletter\def\input@path{{vendor-fdu/}}\makeatother
+\usetheme{fdu}
+\usefonttheme{professionalfonts}
+% Preserve native FDU layouts; configure watermark opacity and author metadata.
+% The upstream .sty remains byte-for-byte unchanged.
+\makeatletter
+\expandafter\patchcmd\csname beamer@@tmpl@background canvas\endcsname{opacity=.05}{opacity=.022}{}{\PackageError{course}{Cannot configure FDU watermark}{}}
+\expandafter\patchcmd\csname beamer@@tmpl@footline\endcsname{\insertshortauthor~(\insertshortinstitute)}{\insertshortauthor}{}{\PackageError{course}{Cannot configure author footer}{}}
+\makeatother
+\graphicspath{{resources/}{../../data/results/dominance_figures/}{../../data/results/kreach_figures/}}
+\definecolor{Navy}{HTML}{132A46}
+\definecolor{FBlue}{HTML}{1766A3}
+\definecolor{Teal}{HTML}{008B80}
+\definecolor{Gold}{HTML}{C49A3B}
+\definecolor{Muted}{HTML}{62758B}
+\definecolor{Line}{HTML}{D8E2EB}
+\definecolor{Edge}{HTML}{91A4B6}
+\definecolor{Light}{HTML}{F1F5F8}
+\definecolor{Alert}{HTML}{AE4D4D}
+\setbeamercolor{normal text}{fg=Navy,bg=white}
+\setbeamercolor{structure}{fg=FBlue}
+\setbeamercolor{frametitle}{fg=white,bg=FBlue}
+\setbeamercolor{title}{fg=white,bg=FBlue}
+\setbeamercolor{palette primary}{fg=white,bg=FBlue}
+\setbeamercolor{palette secondary}{fg=white,bg=Navy}
+\setbeamercolor{palette tertiary}{fg=white,bg=Navy}
+\setbeamercolor{title in head/foot}{fg=white,bg=Navy!95}
+\setbeamercolor{block body}{fg=Navy,bg=Light}
+\setbeamercolor{alerted text}{fg=Alert}
+\setbeamerfont{frametitle}{size=\Large,series=\bfseries}
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+\setbeamerfont{subtitle}{size=\normalsize}
+\setbeamerfont{author}{size=\normalsize}
+\setbeamerfont{institute}{size=\footnotesize}
+\setbeamerfont{date}{size=\footnotesize}
+\setbeamersize{text margin left=8mm,text margin right=8mm}
+\setbeamertemplate{navigation symbols}{}
+\setlength{\parskip}{.15em}
+\newcommand{\Key}[1]{\par\vspace{1mm}\begin{beamercolorbox}[wd=\textwidth,sep=1.8mm,rounded=true]{block body}\fontsize{11}{13}\selectfont #1\end{beamercolorbox}}
+\newcommand{\T}[1]{{\color{Teal}\bfseries #1}}
+\newcommand{\G}[1]{{\color{Gold}\bfseries #1}}
+\newcommand{\Micro}[1]{{\fontsize{11}{14}\selectfont #1}}
+\renewcommand{\arraystretch}{1.22}
+\input{assets/paper_graph.tex}
+\input{assets/dominance_graph.tex}
+\input{generated/v3_constants.tex}
+\title[K-hop 可达性查询]{K-hop 可达性查询}
+\subtitle{K-Reach 论文分析与阈值支配剪枝}
+\author[第十三组]{第十三组}
+\institute[]{《图数据管理与挖掘》课程期中汇报}
+\date[]{}
+\hypersetup{pdftitle={K-hop 可达性查询：K-Reach 论文分析与阈值支配剪枝},pdfauthor={第十三组},pdfsubject={K-hop 可达性查询论文精读与改进验证},colorlinks=true,urlcolor=FBlue,linkcolor=white}
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+\input{paper.tex}
+\input{improvement.tex}
+\appendix
+\input{appendix.tex}
+\end{document}

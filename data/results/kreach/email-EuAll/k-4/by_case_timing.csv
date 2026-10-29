@@ -1,0 +1,13 @@
+dataset,k,case,codec,queries,latency_us
+email-EuAll,4,1,csr,123,0.1627192056840222
+email-EuAll,4,1,dense,123,0.1538466898954704
+email-EuAll,4,1,adaptive,123,0.17993373157352094
+email-EuAll,4,2,csr,200,0.186023
+email-EuAll,4,2,dense,200,0.19955699999999998
+email-EuAll,4,2,adaptive,200,0.1896125654450262
+email-EuAll,4,3,csr,1318,0.35208707832380065
+email-EuAll,4,3,dense,1318,0.21954752379638567
+email-EuAll,4,3,adaptive,1318,0.21086904159741793
+email-EuAll,4,4,csr,3359,0.32934298211464036
+email-EuAll,4,4,dense,3359,0.14650998125246414
+email-EuAll,4,4,adaptive,3359,0.16697809221932297

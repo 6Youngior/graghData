@@ -1,0 +1,12 @@
+{
+  "dataset": "wiki-Vote",
+  "k": 6,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "queries": 5000,
+  "repeats": 9,
+  "shared_kmax6_bfs_seconds": 0.1958829000031983
+}

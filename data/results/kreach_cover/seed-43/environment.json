@@ -1,0 +1,26 @@
+{
+  "platform": "Windows-10-10.0.26200-SP0",
+  "numpy": "2.4.4",
+  "numba": "0.68.1",
+  "cpu_affinity": 2,
+  "parameters": {
+    "datasets": [
+      "wiki-Vote",
+      "p2p-Gnutella31",
+      "email-EuAll"
+    ],
+    "ks": [
+      4
+    ],
+    "seeds": [
+      17
+    ],
+    "cover_seed": 43,
+    "queries": 5000,
+    "repeats": 9,
+    "target": 0.08,
+    "force": false
+  },
+  "timing": "answers-only warmed single-thread Numba batch; diagnostics separate",
+  "cover": "maximal matching endpoints, shuffled directed edges, seed17; verified edge coverage"
+}

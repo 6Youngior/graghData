@@ -1,0 +1,22 @@
+{
+  "parameters": {
+    "datasets": [
+      "wiki-Vote",
+      "p2p-Gnutella31",
+      "email-EuAll"
+    ],
+    "ks": [
+      4
+    ],
+    "seeds": [
+      17
+    ],
+    "repeats": 9,
+    "target": 0.08,
+    "cover_seed": 29,
+    "force": false
+  },
+  "cpu_affinity": 2,
+  "timing": "identical answers-only boundary query kernel; warmed; shuffled variants; median",
+  "baseline": "pre-ranked boundaries for all variants; CSR join implements paper 4.2.2 merge plus deterministic cost switch"
+}

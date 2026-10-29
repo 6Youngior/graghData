@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "dataset": "p2p-Gnutella31",
+  "k": 2,
+  "queries_per_batch": 5000,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "variants": [
+    "Ranked-CSR",
+    "Join-CSR",
+    "Dominance-CSR",
+    "DominanceJoin-CSR",
+    "Ranked-Adaptive",
+    "Dominance-Adaptive",
+    "Source-Adaptive",
+    "Target-Adaptive"
+  ],
+  "repeats": 9
+}

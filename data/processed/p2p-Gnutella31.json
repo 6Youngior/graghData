@@ -1,0 +1,11 @@
+{
+  "name": "p2p-Gnutella31",
+  "nodes": 62586,
+  "edges": 147892,
+  "raw_edges": 147892,
+  "removed_self_loops": 0,
+  "removed_parallel_edges": 0,
+  "directed": true,
+  "weighted": false,
+  "edge_sha256": "404fe43b49543be179bc51650772b490597cc8cf1c05ab3e4cb65562726aa084"
+}

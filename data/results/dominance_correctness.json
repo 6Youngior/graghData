@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "graphs": 124,
+  "oracle": "Independent Python deque BFS",
+  "method_answers": 844800,
+  "checks": [
+    "all four endpoint cases",
+    "two threshold budgets",
+    "source-only and target-only ablations",
+    "joint dominance",
+    "CSR join baseline",
+    "self and disconnected queries"
+  ],
+  "elapsed_seconds": 1.3625604000008025
+}

@@ -1,0 +1,725 @@
+[
+  {
+    "id": "wiki-positive",
+    "title": "Wiki-Vote · 可达查询",
+    "dataset": "wiki-Vote",
+    "seed": 17,
+    "workload": "balanced",
+    "query_index": 1207,
+    "source": 5398,
+    "target": 3429,
+    "k": 4,
+    "budget": 2,
+    "caseId": 4,
+    "answer": true,
+    "distance": 4,
+    "sources": [
+      {
+        "id": 5412,
+        "kept": false
+      },
+      {
+        "id": 5714,
+        "kept": true
+      }
+    ],
+    "targets": [
+      {
+        "id": 161,
+        "kept": false
+      },
+      {
+        "id": 1259,
+        "kept": true
+      },
+      {
+        "id": 2120,
+        "kept": true
+      },
+      {
+        "id": 2256,
+        "kept": true
+      },
+      {
+        "id": 2332,
+        "kept": true
+      },
+      {
+        "id": 2703,
+        "kept": false
+      },
+      {
+        "id": 2842,
+        "kept": false
+      }
+    ],
+    "codes": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        1,
+        2,
+        0,
+        0
+      ]
+    ],
+    "baseline": {
+      "trace": [
+        {
+          "row": 0,
+          "col": 0,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "code": 2,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "code": 1,
+          "accepted": true
+        }
+      ],
+      "path": [
+        5398,
+        5714,
+        1549,
+        2120,
+        3429
+      ]
+    },
+    "pruned": {
+      "trace": [
+        {
+          "row": 1,
+          "col": 1,
+          "code": 2,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "code": 1,
+          "accepted": true
+        }
+      ],
+      "path": [
+        5398,
+        5714,
+        1549,
+        2120,
+        3429
+      ]
+    }
+  },
+  {
+    "id": "wiki-negative",
+    "title": "Wiki-Vote · 不可达查询",
+    "dataset": "wiki-Vote",
+    "seed": 17,
+    "workload": "balanced",
+    "query_index": 317,
+    "source": 6380,
+    "target": 5470,
+    "k": 4,
+    "budget": 2,
+    "caseId": 4,
+    "answer": false,
+    "distance": 5,
+    "sources": [
+      {
+        "id": 2223,
+        "kept": true
+      },
+      {
+        "id": 4401,
+        "kept": true
+      },
+      {
+        "id": 4798,
+        "kept": true
+      },
+      {
+        "id": 6897,
+        "kept": false
+      }
+    ],
+    "targets": [
+      {
+        "id": 789,
+        "kept": true
+      },
+      {
+        "id": 2688,
+        "kept": false
+      },
+      {
+        "id": 2909,
+        "kept": true
+      },
+      {
+        "id": 4073,
+        "kept": false
+      },
+      {
+        "id": 4828,
+        "kept": true
+      },
+      {
+        "id": 5190,
+        "kept": false
+      }
+    ],
+    "codes": [
+      [
+        2,
+        0,
+        2,
+        0,
+        2,
+        0
+      ],
+      [
+        3,
+        0,
+        2,
+        0,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        2,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "baseline": {
+      "trace": [
+        {
+          "row": 0,
+          "col": 0,
+          "code": 2,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "code": 2,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "code": 2,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "code": 3,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "code": 2,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "code": 2,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "code": 2,
+          "accepted": false
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "code": 2,
+          "accepted": false
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "code": 2,
+          "accepted": false
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "code": 0,
+          "accepted": false
+        }
+      ],
+      "path": []
+    },
+    "pruned": {
+      "trace": [
+        {
+          "row": 0,
+          "col": 0,
+          "code": 2,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "code": 2,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "code": 2,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "code": 3,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "code": 2,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "code": 2,
+          "accepted": false
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "code": 2,
+          "accepted": false
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "code": 2,
+          "accepted": false
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "code": 2,
+          "accepted": false
+        }
+      ],
+      "path": []
+    }
+  },
+  {
+    "id": "p2p-unchanged",
+    "title": "Gnutella31 · 无支配关系",
+    "dataset": "p2p-Gnutella31",
+    "seed": 43,
+    "workload": "balanced",
+    "query_index": 1719,
+    "source": 30331,
+    "target": 18897,
+    "k": 4,
+    "budget": 2,
+    "caseId": 4,
+    "answer": true,
+    "distance": 4,
+    "sources": [
+      {
+        "id": 30356,
+        "kept": true
+      },
+      {
+        "id": 30357,
+        "kept": true
+      }
+    ],
+    "targets": [
+      {
+        "id": 18749,
+        "kept": true
+      },
+      {
+        "id": 25358,
+        "kept": true
+      },
+      {
+        "id": 27728,
+        "kept": true
+      },
+      {
+        "id": 33106,
+        "kept": true
+      },
+      {
+        "id": 33622,
+        "kept": true
+      },
+      {
+        "id": 37294,
+        "kept": true
+      },
+      {
+        "id": 42529,
+        "kept": true
+      }
+    ],
+    "codes": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "baseline": {
+      "trace": [
+        {
+          "row": 0,
+          "col": 0,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "code": 1,
+          "accepted": true
+        }
+      ],
+      "path": [
+        30331,
+        30357,
+        35910,
+        37294,
+        18897
+      ]
+    },
+    "pruned": {
+      "trace": [
+        {
+          "row": 0,
+          "col": 0,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "code": 0,
+          "accepted": false
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "code": 1,
+          "accepted": true
+        }
+      ],
+      "path": [
+        30331,
+        30357,
+        35910,
+        37294,
+        18897
+      ]
+    }
+  }
+]

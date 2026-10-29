@@ -1,0 +1,9 @@
+<section id="dominance" class="view" hidden>
+<div class="section-heading"><div><h2>预算改变，代表点也会改变</h2><p>在论文示例图中增加 c → d，固定 k = 3</p></div></div>
+<div class="controls"><span class="muted">查询</span><button id="dom-case3" class="primary">c → g</button><button id="dom-case4">c → h</button><span id="dom-case-label" class="muted"></span></div>
+<div class="graphs"><article class="card graph-card"><div class="card-head"><h3>查询边界 {b, d}</h3><span class="muted">青色为新增边</span></div><svg id="dom-graph" viewBox="0 0 600 260" role="img" aria-label="增加 c 到 d 边后的示例图"></svg></article>
+<article class="card"><h3 id="dom-budget-title"></h3><div id="dom-sets"></div><div id="dom-relation" class="dom-relation"></div><p id="dom-why" class="method-note"></p></article></div>
+<div class="execution"><div class="metrics"><div><small>核心预算</small><strong id="dom-budget"></strong></div><div><small>原方法查找</small><strong id="dom-raw-probes"></strong></div><div><small>剪枝后查找</small><strong id="dom-cut-probes"></strong></div><div><small>查询结果</small><strong id="dom-answer"></strong></div></div><div id="dom-message" class="step-message" aria-live="polite"></div><div class="transport"><button id="dom-reset">重置</button><button id="dom-back">上一步</button><button id="dom-next" class="primary">下一步</button><span id="dom-progress"></span></div></div>
+<p class="method-note">Rᵦ(u) 为 u 在 b 跳内可达的核心节点集。源侧比较 Rᵦ，终侧比较对应的前驱集合 Lᵦ。</p>
+</section>
+

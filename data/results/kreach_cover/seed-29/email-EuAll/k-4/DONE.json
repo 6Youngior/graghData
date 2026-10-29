@@ -1,0 +1,11 @@
+{
+  "dataset": "email-EuAll",
+  "k": 4,
+  "seeds": [
+    17
+  ],
+  "queries": 5000,
+  "repeats": 9,
+  "shared_bfs_seconds": 6.224590600002557,
+  "bfs_kmax": 4
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "examples": [
+    {
+      "id": "wiki-positive",
+      "source": 5398,
+      "target": 3429,
+      "raw_probes": 10,
+      "pruned_probes": 2,
+      "answer": true
+    },
+    {
+      "id": "wiki-negative",
+      "source": 6380,
+      "target": 5470,
+      "raw_probes": 24,
+      "pruned_probes": 9,
+      "answer": false
+    },
+    {
+      "id": "p2p-unchanged",
+      "source": 30331,
+      "target": 18897,
+      "raw_probes": 13,
+      "pruned_probes": 13,
+      "answer": true
+    }
+  ]
+}

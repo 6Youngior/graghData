@@ -1,0 +1,56 @@
+{
+  "query_instances": 270000,
+  "method_answers": 2160000,
+  "main_k": 4,
+  "datasets": {
+    "wiki-Vote": {
+      "pruning_speedup": 1.2780567418367585,
+      "join_pruning_speedup": 1.1271026261904853,
+      "raw_mean_probes": 1.7822000000000002,
+      "pruned_mean_probes": 1.3529333333333333,
+      "probe_reduction": 0.24086335241087808,
+      "actual_probe_increase_queries": 1,
+      "queries": 30000,
+      "boundary_build_seconds": 0.10434630000236211,
+      "boundary_raw_bytes": 109400,
+      "boundary_pruned_bytes": 180648,
+      "deployment_raw_bytes": 2039347,
+      "deployment_pruned_bytes": 2110595,
+      "certificate_scratch_bytes": 2642208,
+      "scratch_distance_bytes": 10484644
+    },
+    "p2p-Gnutella31": {
+      "pruning_speedup": 0.986711434074901,
+      "join_pruning_speedup": 0.9842458466539661,
+      "raw_mean_probes": 1.4048999999999998,
+      "pruned_mean_probes": 1.4035,
+      "probe_reduction": 0.0009965122072744803,
+      "actual_probe_increase_queries": 0,
+      "queries": 30000,
+      "boundary_build_seconds": 2.2329748000047402,
+      "boundary_raw_bytes": 743720,
+      "boundary_pruned_bytes": 1487168,
+      "deployment_raw_bytes": 23361060,
+      "deployment_pruned_bytes": 24104508,
+      "certificate_scratch_bytes": 163021824,
+      "scratch_distance_bytes": 652087296
+    },
+    "email-EuAll": {
+      "pruning_speedup": 1.0144957314175995,
+      "join_pruning_speedup": 0.9673719766218198,
+      "raw_mean_probes": 1.2474333333333334,
+      "pruned_mean_probes": 1.2090333333333334,
+      "probe_reduction": 0.03078320818747826,
+      "actual_probe_increase_queries": 0,
+      "queries": 30000,
+      "boundary_build_seconds": 5.041269400004239,
+      "boundary_raw_bytes": 3533540,
+      "boundary_pruned_bytes": 6955524,
+      "deployment_raw_bytes": 33003834,
+      "deployment_pruned_bytes": 36425818,
+      "certificate_scratch_bytes": 330221568,
+      "scratch_distance_bytes": 1320304896
+    }
+  },
+  "wiki_k4_conservative_break_even_queries": 1916236
+}

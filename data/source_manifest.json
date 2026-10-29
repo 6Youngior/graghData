@@ -1,0 +1,68 @@
+[
+  {
+    "url": "https://snap.stanford.edu/data/wiki-Vote.txt.gz",
+    "path": "data/raw/wiki-Vote.txt.gz",
+    "bytes": 290339,
+    "sha256": "7d3e53626e14b8b09fb3b396bece9d481ad606bd64ceab066349ff57d4ada7fc"
+  },
+  {
+    "url": "https://snap.stanford.edu/data/p2p-Gnutella31.txt.gz",
+    "path": "data/raw/p2p-Gnutella31.txt.gz",
+    "bytes": 511295,
+    "sha256": "20cf3b0642718e7628c7aa15a41b21e663aea872946878d5b9abc80ee360f869"
+  },
+  {
+    "url": "https://snap.stanford.edu/data/email-EuAll.txt.gz",
+    "path": "data/raw/email-EuAll.txt.gz",
+    "bytes": 1581753,
+    "sha256": "c256f8be57084fe7b2dbe96f99d4d79e56c19228773526058abc99a6fa86e9d9"
+  },
+  {
+    "url": "https://www1.se.cuhk.edu.hk/~hcheng/paper/vldb2012.pdf",
+    "path": "docs/papers/k-reach-2012.pdf",
+    "bytes": 281854,
+    "sha256": "29fab18cdddf1a82f4d59f7326aa8f4bdfc7f550282d83de5cc92b6279998a32"
+  },
+  {
+    "url": "https://mdpi-res.com/d_attachment/applsci/applsci-13-03470/article_deploy/applsci-13-03470.pdf",
+    "path": "docs/papers/vcrea-2023.pdf",
+    "bytes": 920023,
+    "sha256": "e7a32bf767792af7b0b4ce21635091bd7297ba6ddc4653afb7799fa9942be373"
+  },
+  {
+    "url": "https://arxiv.org/pdf/2311.03542",
+    "path": "docs/papers/reachability-survey-2025.pdf",
+    "bytes": 2769899,
+    "sha256": "390552319a5ec5c0a731049ad8f45c9f78dbca84e9b508792afca7ff377cae07"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/sonnyhcl/beamerthemefdu/master/resources/background.pdf",
+    "path": "docs/slides/resources/background.pdf",
+    "bytes": 16116,
+    "sha256": "9e2999383eef6eb1c09bc8bc44b421f1c63d1dd4cca30cbb7e8034203d0e313b"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/sonnyhcl/beamerthemefdu/master/resources/fudan.pdf",
+    "path": "docs/slides/resources/fudan.pdf",
+    "bytes": 26503,
+    "sha256": "d9042e0bdca1274b63f96bb6d60331f077a6ff9c021f7c36b7bcda7941a0074c"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/sonnyhcl/beamerthemefdu/master/beamerthemefdu.sty",
+    "path": "docs/slides/vendor-fdu/beamerthemefdu.sty",
+    "bytes": 2370,
+    "sha256": "493e458ec6cd955da6567c613374d2cc1faf25c51e7e21a1e5a959ddeabfa3d3"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/sonnyhcl/beamerthemefdu/master/LICENSE",
+    "path": "docs/slides/vendor-fdu/LICENSE",
+    "bytes": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/sonnyhcl/beamerthemefdu/master/README.md",
+    "path": "docs/slides/vendor-fdu/README.original.md",
+    "bytes": 1124,
+    "sha256": "881ec487c3cc24dd47f7a937d245dbc13dd8749d56c4651ba604ea0caa485547"
+  }
+]

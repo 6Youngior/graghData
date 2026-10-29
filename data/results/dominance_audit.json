@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "main_method_answers": 2160000,
+  "all_method_answers": 2640000,
+  "live_deployment_checkpoint_answers": 180000,
+  "raw_boundary_probes_match_original_paper_implementation": true,
+  "certificate_method": "direct integer-distance inclusion; independent of construction bit packing",
+  "actual_probe_increase_queries": 5,
+  "reports": [
+    {
+      "dataset": "wiki-Vote",
+      "k": 2,
+      "cover_seed": 17,
+      "removed_candidates_certified": 1935,
+      "integer_reach_memberships_checked": 9520,
+      "kept_candidates_checked": 24301
+    },
+    {
+      "dataset": "wiki-Vote",
+      "k": 4,
+      "cover_seed": 17,
+      "removed_candidates_certified": 9538,
+      "integer_reach_memberships_checked": 6002623,
+      "kept_candidates_checked": 16698
+    },
+    {
+      "dataset": "wiki-Vote",
+      "k": 6,
+      "cover_seed": 17,
+      "removed_candidates_certified": 17303,
+      "integer_reach_memberships_checked": 22879681,
+      "kept_candidates_checked": 8933
+    },
+    {
+      "dataset": "p2p-Gnutella31",
+      "k": 2,
+      "cover_seed": 17,
+      "removed_candidates_certified": 23,
+      "integer_reach_memberships_checked": 65,
+      "kept_candidates_checked": 121489
+    },
+    {
+      "dataset": "p2p-Gnutella31",
+      "k": 4,
+      "cover_seed": 17,
+      "removed_candidates_certified": 68,
+      "integer_reach_memberships_checked": 272,
+      "kept_candidates_checked": 121444
+    },
+    {
+      "dataset": "p2p-Gnutella31",
+      "k": 6,
+      "cover_seed": 17,
+      "removed_candidates_certified": 251,
+      "integer_reach_memberships_checked": 3504,
+      "kept_candidates_checked": 121261
+    },
+    {
+      "dataset": "email-EuAll",
+      "k": 2,
+      "cover_seed": 17,
+      "removed_candidates_certified": 7573,
+      "integer_reach_memberships_checked": 30419,
+      "kept_candidates_checked": 698337
+    },
+    {
+      "dataset": "email-EuAll",
+      "k": 4,
+      "cover_seed": 17,
+      "removed_candidates_certified": 27889,
+      "integer_reach_memberships_checked": 16938383,
+      "kept_candidates_checked": 678021
+    },
+    {
+      "dataset": "email-EuAll",
+      "k": 6,
+      "cover_seed": 17,
+      "removed_candidates_certified": 111497,
+      "integer_reach_memberships_checked": 328287510,
+      "kept_candidates_checked": 594413
+    },
+    {
+      "dataset": "wiki-Vote",
+      "k": 4,
+      "cover_seed": 29,
+      "removed_candidates_certified": 8790,
+      "integer_reach_memberships_checked": 4932618,
+      "kept_candidates_checked": 16174
+    },
+    {
+      "dataset": "p2p-Gnutella31",
+      "k": 4,
+      "cover_seed": 29,
+      "removed_candidates_certified": 70,
+      "integer_reach_memberships_checked": 311,
+      "kept_candidates_checked": 120838
+    },
+    {
+      "dataset": "email-EuAll",
+      "k": 4,
+      "cover_seed": 29,
+      "removed_candidates_certified": 28316,
+      "integer_reach_memberships_checked": 17444800,
+      "kept_candidates_checked": 677886
+    },
+    {
+      "dataset": "wiki-Vote",
+      "k": 4,
+      "cover_seed": 43,
+      "removed_candidates_certified": 8931,
+      "integer_reach_memberships_checked": 5164331,
+      "kept_candidates_checked": 15907
+    },
+    {
+      "dataset": "p2p-Gnutella31",
+      "k": 4,
+      "cover_seed": 43,
+      "removed_candidates_certified": 83,
+      "integer_reach_memberships_checked": 455,
+      "kept_candidates_checked": 120453
+    },
+    {
+      "dataset": "email-EuAll",
+      "k": 4,
+      "cover_seed": 43,
+      "removed_candidates_certified": 28379,
+      "integer_reach_memberships_checked": 17945805,
+      "kept_candidates_checked": 677899
+    }
+  ]
+}

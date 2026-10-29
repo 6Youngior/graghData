@@ -1,0 +1,11 @@
+{
+  "dataset": "p2p-Gnutella31",
+  "k": 4,
+  "seeds": [
+    17
+  ],
+  "queries": 5000,
+  "repeats": 9,
+  "shared_bfs_seconds": 0.4470709999986866,
+  "bfs_kmax": 4
+}

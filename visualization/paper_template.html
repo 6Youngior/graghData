@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>K-hop 可达性查询 · 第十三组</title><style>/*STYLE*/</style></head><body>
+<header><h1>K-hop 可达性查询</h1><span>《图数据管理与挖掘》 · 第十三组</span></header>
+<main><nav aria-label="演示内容">
+<button class="tab active" data-tab="comparison">查询对比</button><button class="tab" data-tab="algorithm">K-Reach</button><button class="tab" data-tab="dominance">阈值支配剪枝</button><button class="tab" data-tab="results">实验结果</button></nav>
+<section id="comparison" class="view">
+<div class="section-heading"><div><h2>同一查询，两种方法</h2><p>同步展示每一次核心点对检查</p></div><div class="display-actions"><button id="cmp-fullscreen">全屏演示</button></div></div>
+<div class="comparison-toolbar"><label>查询示例 <select id="cmp-example" aria-label="查询示例"></select></label><span id="cmp-query"></span><span id="cmp-budget"></span></div>
+<div class="figure-legend"><span><i class="legend-edge"></i>原图边</span><span><i class="legend-edge dashed"></i>索引检查</span><span><i class="legend-cell checked"></i>已检查</span><span><i class="legend-cell accepted"></i>满足预算</span><span><i class="legend-cell removed"></i>已剪枝</span></div>
+<div class="comparison-panels">
+<article class="comparison-panel baseline" aria-label="K-Reach 查询过程">
+<div class="method-heading"><div><h3>(a) K-Reach</h3><span id="cmp-baseline-boundary"></span></div><div class="probe-counter"><strong id="cmp-baseline-count">0</strong><span>次核心查找</span></div></div>
+<svg id="cmp-baseline-graph" class="boundary-graph" viewBox="0 0 560 320" role="img" aria-label="K-Reach 查询边界"></svg>
+<div class="query-state"><span id="cmp-baseline-pair">等待开始</span><strong id="cmp-baseline-state"></strong></div>
+<div id="cmp-baseline-matrix" class="probe-matrix"></div><div class="method-progress"><div id="cmp-baseline-bar"></div></div><div id="cmp-baseline-path" class="witness-path"></div></article>
+<article class="comparison-panel pruned" aria-label="阈值支配剪枝查询过程">
+<div class="method-heading"><div><h3>(b) 阈值支配剪枝</h3><span id="cmp-pruned-boundary"></span></div><div class="probe-counter"><strong id="cmp-pruned-count">0</strong><span>次核心查找</span></div></div>
+<svg id="cmp-pruned-graph" class="boundary-graph" viewBox="0 0 560 320" role="img" aria-label="剪枝后的查询边界"></svg>
+<div class="query-state"><span id="cmp-pruned-pair">等待开始</span><strong id="cmp-pruned-state"></strong></div>
+<div id="cmp-pruned-matrix" class="probe-matrix"></div><div class="method-progress"><div id="cmp-pruned-bar"></div></div><div id="cmp-pruned-path" class="witness-path"></div></article></div>
+<div class="comparison-transport"><button id="cmp-play" class="primary">播放对比</button><button id="cmp-reset">重置</button><button id="cmp-back" aria-label="上一步">←</button><button id="cmp-next" aria-label="下一步">→</button><label class="pace-label">每步 <select id="cmp-pace"><option value="1200">1.2 秒</option><option value="800" selected>0.8 秒</option><option value="400">0.4 秒</option></select></label><input id="cmp-seek" type="range" min="0" value="0" aria-label="查找步骤"><span id="cmp-progress"></span></div>
+<p id="cmp-outcome" class="comparison-outcome" aria-live="polite"></p>
+<details class="video-export"><summary>备用视频</summary><div class="video-actions"><button id="open-video">播放视频</button><a href="方法对比.mp4" download>下载 MP4</a></div></details>
+</section>
+<section id="algorithm" class="view" hidden>
+<div class="section-heading"><div><h2>K-Reach 查询过程</h2><p>顶点覆盖 → 核心索引 → 四类查询</p></div><a class="reference-link" href="https://doi.org/10.14778/2350229.2350247">Cheng et al., PVLDB 2012</a></div>
+<div class="controls"><label>起点 <select id="source"></select></label><label>终点 <select id="target"></select></label><label>k <select id="k"><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option></select></label><label>核心编码 <select id="codec"><option value="adaptive">混合编码</option><option value="csr">稀疏 CSR</option><option value="dense">稠密</option></select></label><div class="presets"><button id="case1">内 → 内</button><button id="case2">内 → 外</button><button id="case3">外 → 内</button><button id="case4">外 → 外</button><button id="negative">不可达</button></div></div>
+<div class="graphs"><article class="card graph-card"><div class="card-head"><h3>原图 G</h3><span class="muted">覆盖 S = {b, d, g, i}</span></div><svg id="original-graph" viewBox="0 0 600 260" aria-label="论文原图" role="img"></svg></article><article class="card graph-card"><div class="card-head"><h3>核心索引 Iₖ</h3><span id="decision" class="pill">等待判定</span></div><div class="index-body"><svg id="index-graph" viewBox="0 0 300 260" aria-label="核心索引" role="img"></svg><div id="matrix" class="matrix"></div></div></article></div>
+<div class="execution"><div class="metrics"><div><small>查询类别</small><strong id="case-value"></strong></div><div><small>核心预算</small><strong id="budget-value"></strong></div><div><small>核心查找</small><strong id="probes-value"></strong></div><div><small>二分比较</small><strong id="comparisons-value"></strong></div></div><div id="step-message" class="step-message" aria-live="polite"></div><div class="transport"><button id="reset">重置</button><button id="back">上一步</button><button id="step">下一步</button><button id="play" class="primary">播放</button><button id="finish">查看结果</button><span id="progress"></span></div></div>
+<p id="truth" class="method-note"></p></section>
+<!--DOMINANCE-->
+<section id="results" class="view" hidden>
+<div class="section-heading"><div><h2>真实图上的查询性能</h2><p>相同混合核心编码，比较剪枝前后</p></div><span class="muted">k = 4</span></div>
+<div id="result-table"></div>
+<div class="result-figures"><figure><figcaption>(a) 查询加速比</figcaption><img id="speed-chart" alt="三张真实图上剪枝前后的查询时间比"></figure><figure><figcaption>(b) 各类查询的核心查找次数</figcaption><img id="density-chart" alt="Wiki-Vote 不同查询类别的核心查找次数"></figure></div>
+<p class="method-note">3 张图，k = 2 / 4 / 6，两种查询分布，3 个随机种子；每批 5,000 条查询，重复计时 9 次。</p>
+<details class="technical-details"><summary>索引编码与空间</summary><div id="storage"><div class="controls"><label>图数据 <select id="storage-dataset"></select></label><span class="muted">k = 4</span></div><div id="storage-stats" class="stat-grid"></div><div class="storage-grid"><article class="card"><h3>长索引行</h3><div id="dense-row"></div></article><article class="card"><h3>短索引行</h3><div id="sparse-row"></div></article></div><p class="method-note">稀疏行载荷：4r + ⌈r/4⌉ 字节；稠密行载荷：⌈|S|/4⌉ 字节。</p></div></details>
+</section></main>
+<dialog id="video-dialog"><div class="video-heading"><span>真实查询 · 方法对比</span><button id="close-video" aria-label="关闭视频">关闭</button></div><video id="comparison-video" controls playsinline preload="none" src="方法对比.mp4"></video></dialog>
+<script>/*ENGINE*/</script><script>/*DATA*/</script><script>/*APP*/</script></body></html>
+

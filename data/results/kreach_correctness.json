@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "exhaustive_graphs": 64,
+  "randomized_graphs": 60,
+  "oracle": "Independent Python deque full BFS",
+  "algorithm_answers_checked": 115284,
+  "codec_cells_checked": 139536,
+  "all_four_query_cases_checked": true,
+  "adaptive_size_envelope_checked": true,
+  "elapsed_seconds": 1.1251535000010335
+}

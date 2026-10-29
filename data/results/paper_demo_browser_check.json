@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "page_errors": [],
+  "external_http_requests": 0,
+  "replayed_steps": 50,
+  "minimum_text_contrast": 7.693139152707401,
+  "checks": [
+    "three real query traces",
+    "early completion",
+    "playback and pause on tab switch",
+    "four paper query cases",
+    "positive/negative decisions",
+    "three codecs",
+    "budget reversal",
+    "storage details",
+    "real result figures",
+    "continuous pruning and moving lookup cursor",
+    "text contrast at least 4.5:1",
+    "fullscreen webpage presentation",
+    "local 1080p MP4 playback",
+    "1440px, 800px, 480px and 360px layouts"
+  ]
+}

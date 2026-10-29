@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "counterexample": "Same boundary keeps b for budget1, d for budget2",
+  "fixture_queries": 500,
+  "paper_graph_augmentation": "one edge c\u2192d"
+}

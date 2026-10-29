@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "formal_configurations": 432,
+  "query_instances": 270000,
+  "method_answers": 2160000,
+  "timing_records": 3888,
+  "auxiliary_codec_answers": 810000,
+  "live_deployment_answers": 180000,
+  "logical_index_configurations": 9,
+  "cover_sensitivity_rows": 18,
+  "pdf_pages": 27,
+  "main_slides": 13,
+  "pdf_warnings": 0,
+  "fonts_embedded": 23,
+  "source_hashes_checked": 11,
+  "optional_reading_papers_omitted": 0,
+  "required_deliverables_present": true
+}

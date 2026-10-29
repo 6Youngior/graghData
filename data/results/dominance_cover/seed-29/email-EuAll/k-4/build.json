@@ -1,0 +1,56 @@
+{
+  "dataset": "email-EuAll",
+  "k": 4,
+  "cover": 36368,
+  "boundary_build_seconds": 4.7091570000047795,
+  "shared_bfs_seconds": 6.317415299999993,
+  "bfs_kmax": 4,
+  "scratch_distance_bytes": 1322631424,
+  "max_certificate_scratch_bytes": 331094272,
+  "boundaries": {
+    "k_minus_2": {
+      "budget": 2,
+      "out_subset_checks": 298897,
+      "in_subset_checks": 56949,
+      "out_word_checks": 6652470,
+      "in_word_checks": 948829,
+      "out_removed": 10189,
+      "in_removed": 1336,
+      "out_changed_vertices": 7808,
+      "in_changed_vertices": 1213,
+      "raw_out_entries": 278320,
+      "raw_in_entries": 74781,
+      "pruned_out_entries": 268131,
+      "pruned_in_entries": 73445,
+      "certificate_scratch_bytes": 331094272,
+      "deployed_boundary_bytes": 3488024
+    },
+    "k_minus_1": {
+      "budget": 3,
+      "out_subset_checks": 314107,
+      "in_subset_checks": 55868,
+      "out_word_checks": 11972393,
+      "in_word_checks": 1839236,
+      "out_removed": 14898,
+      "in_removed": 1893,
+      "out_changed_vertices": 10586,
+      "in_changed_vertices": 1661,
+      "raw_out_entries": 278320,
+      "raw_in_entries": 74781,
+      "pruned_out_entries": 263422,
+      "pruned_in_entries": 72888,
+      "certificate_scratch_bytes": 331094272,
+      "deployed_boundary_bytes": 3466960
+    }
+  },
+  "boundary_bytes": {
+    "raw": 3534124,
+    "source": 6967900,
+    "target": 7055332,
+    "both": 6954984
+  },
+  "core_index_bytes": {
+    "csr": 34530907,
+    "adaptive": 29838778
+  }
+}

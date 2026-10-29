@@ -1,0 +1,28 @@
+\newcommand{\PaperGraph}[2][1]{%
+\begin{tikzpicture}[x=10mm,y=8mm,vertex/.style={circle,draw=Line,fill=white,minimum size=6.5mm,inner sep=0pt,font=\normalsize},core/.style={vertex,draw=Gold,fill=Gold!12,line width=1.1pt},every edge/.style={-{Stealth[length=1.8mm]},draw=Edge,line width=.7pt}]
+\ifnum#1=0\tikzset{core/.style={vertex}}\fi
+\node[vertex] (a) at (0,0) {a};
+\node[core] (b) at (1.2,0) {b};
+\node[vertex] (c) at (1.8,1.15) {c};
+\node[core] (d) at (2.4,0) {d};
+\node[vertex] (e) at (3.6,0) {e};
+\node[vertex] (f) at (3.6,-1.15) {f};
+\node[core] (g) at (4.8,0) {g};
+\node[vertex] (h) at (5.4,1.15) {h};
+\node[core] (i) at (6,0) {i};
+\node[vertex] (j) at (7.2,0) {j};
+\begin{scope}[on background layer]
+\draw[every edge] (a) -- (b);
+\draw[every edge] (c) -- (b);
+\draw[every edge] (b) -- (d);
+\draw[every edge] (d) -- (c);
+\draw[every edge] (d) -- (e);
+\draw[every edge] (e) -- (g);
+\draw[every edge] (d) -- (f);
+\draw[every edge] (g) -- (f);
+\draw[every edge] (g) -- (h);
+\draw[every edge] (g) -- (i);
+\draw[every edge] (i) -- (j);
+\foreach \u/\v in {#2}{\draw[-{Stealth[length=2.1mm]},draw=FBlue,line width=1.7pt] (\u) -- (\v);}
+\end{scope}
+\end{tikzpicture}}
