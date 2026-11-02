@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "file": "第十三组-期中汇报-无附录版.pdf",
+  "pages": 14,
+  "main_pages": 13,
+  "reference_pages": 1,
+  "warnings": [],
+  "original_unchanged": true,
+  "original_sha256": "3070f622dceae940188a02bc68a8fbe1dde5bcd6e4234c4fe41d28053739e0a4",
+  "body_and_references_unchanged": true,
+  "bytes": 567817,
+  "sha256": "3ecdfc4fc0dab02ebbcd45cae0b0ef82e66e007fafd032affd6602109caf2e00"
+}
